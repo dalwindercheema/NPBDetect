@@ -18,6 +18,10 @@ NPBDetect is available in:
 
 * [CLI](#cli-installation)
 * [Google Colab](#google-colab)
+* [Jupyter Notebook](#jupyter-notebook)
+* [Docker](#docker)
+* [Usage](#usage)
+
 ----
 
 ## CLI installation ##
@@ -42,15 +46,31 @@ pip3 install torch torchaudio torchvision torchtext torchdata
 5. Test samples to validate installation
    
 ```python NPBDetect.py predict --gbk test/BGC0000004.gbk --pred HC --out_dir outs/```
-*[NPBDetect@google-colab](https://colab.research.google.com/drive/12zXjqk1DFX8Ouv0rYSAWSoaOheluBys9#scrollTo=MiUQ7HHR2rC8))*
+
 ----
 
 ## Google Colab ##
 Click on link to use google colab without setting up locally:
 
+*[NPBDetect@google-colab](https://colab.research.google.com/drive/12zXjqk1DFX8Ouv0rYSAWSoaOheluBys9#scrollTo=MiUQ7HHR2rC8)*
+
 ----
 
-**Usage**
+## Jupyter Notebook ##
+
+Use local jupyter notebook as
+
+
+----
+
+## Docker ##
+
+For docker users
+
+
+----
+
+## Usage ##
 
 1. Generate GBK files with antiSMASH 7
    Use following command to generate GBK file:
