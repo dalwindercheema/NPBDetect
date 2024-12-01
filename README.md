@@ -3,8 +3,8 @@
 NPBDetect is available in:
 <table>
 <tr>
-<td><img src="https://edent.github.io/SuperTinyIcons/images/svg/colaboratory.svg" width="100" title="Google Colab"></td>
 <td><img src="https://edent.github.io/SuperTinyIcons/images/svg/powershell.svg" width="100" title="CLI"></td>
+<td><img src="https://edent.github.io/SuperTinyIcons/images/svg/colaboratory.svg" width="100" title="Google Colab"></td>
 </tr>
 <tr>
 <td><img src="https://jupyter.org/assets/homepage/main-logo.svg" width="100" title="Jupyter"></td>
@@ -14,7 +14,13 @@ NPBDetect is available in:
 
 ----
 
-**Basic installation**
+## Contents ##
+
+* [CLI](#cli-installation)
+* [Google Colab](#google-colab)
+----
+
+## CLI installation ##
 
 1. Setup conda environment
 
@@ -36,6 +42,11 @@ pip3 install torch torchaudio torchvision torchtext torchdata
 5. Test samples to validate installation
    
 ```python NPBDetect.py predict --gbk test/BGC0000004.gbk --pred HC --out_dir outs/```
+*[NPBDetect@google-colab](https://colab.research.google.com/drive/12zXjqk1DFX8Ouv0rYSAWSoaOheluBys9#scrollTo=MiUQ7HHR2rC8))*
+----
+
+## Google Colab ##
+Click on link to use google colab without setting up locally:
 
 ----
 
