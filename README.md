@@ -1,4 +1,4 @@
-# NPBDetect
+# NPBDetect: A Neural network model to detect bioactivities from AntiSmash GBK files
 
 **Basic installation**
 
@@ -19,4 +19,4 @@ pip3 install torch torchaudio torchvision torchtext torchdata
 `git clone git@`
 
 4. Test samples to validate installation
-``
+`python NPBDetect.py predict --gbk test/BGC0000004.gbk --pred HC --out_dir outs/`
