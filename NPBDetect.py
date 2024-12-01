@@ -123,7 +123,7 @@ def print_help( argv ):
                                      add_help = False,
                                      formatter_class = argparse.RawTextHelpFormatter,
                                      help = '''Predict bioactivities''',
-                                     epilog='Usage: NPBDetect predict --gbk <local_path_to_gbk>')
+                                     epilog='Example: NPBDetect predict --gbk <local_path_to_gbk> --pred HC --out_dir <local_path_to_dir>')
     group_usage = progress_parser.add_argument_group('Usage [options]',
                                                      None)
     
