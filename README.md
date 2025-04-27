@@ -13,12 +13,30 @@ NPBDetect is available in:
 
 ## Contents ##
 
+* [Usage](#usage)
 * [CLI](#cli-installation)
 * [Google Colab](#google-colab)
 * [Docker](#docker)
-* [Usage](#usage)
 
 ----
+
+
+## Usage ##
+
+1. Detect biosynthetic gene clusters (BGCs) with antiSMASH 7. The program generate a GBK file which NPBDetect uses to predict bioactivites. antiSMASH 7 is available online or could be setup locally.
+
+   To use the online service, use this link
+   
+   ```https://antismash.secondarymetabolites.org```
+
+   To setup antiSMASH 7 locally, please download the code `https://antismash.secondarymetabolites.org/#!/download` and read instructions to install it `http://docs.antismash.secondarymetabolites.org/install/`
+
+   To generate GBK file with information about BGCs, we have using the following command:
+   
+   ```antismash```
+   
+2. NPBDetect is also available online and installed locally on a user's system. The online vesion uses Google Colaboratory while local version could be setup through conda environment and docker. 
+
 
 ## CLI installation ##
 
@@ -37,28 +55,25 @@ pip3 install torch torchaudio torchvision torchtext torchdata
 ```
 3. Clone repository
    
-```git clone git@```
+```git clone git@github.com:dalwindercheema/NPBDetect.git```
 
-5. Validate installation
+5. Validate installation and test samples
    
-```python NPBDetect.py predict --gbk test/BGC0000004.gbk --pred HC --out_dir outs/```
+```
+python NPBDetect.py \
+predict \
+-v 1 \
+--gbk test/BGC0000004.gbk \
+--pred HC \
+--out_dir outs/
+```
 
 ----
-
-## Usage ##
-
-1. Generate GBK files with antiSMASH 7
-   Use following command to generate GBK file:
-   
-   ```antismash```
-   
-2. Use any version of NPBDetect to predict bioactivity
-   
 
 ----
 
 ## Google Colab ##
-Click on link to use google colab without setting up locally:
+The online version with Google colab is available at:
 
 *[NPBDetect@google-colab](https://colab.research.google.com/drive/12zXjqk1DFX8Ouv0rYSAWSoaOheluBys9#scrollTo=MiUQ7HHR2rC8)*
 
