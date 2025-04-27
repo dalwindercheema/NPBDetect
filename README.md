@@ -3,9 +3,9 @@
 NPBDetect is available in:
 <table>
 <tr>
-<td><img src="https://edent.github.io/SuperTinyIcons/images/svg/powershell.svg" width="100" title="CLI"></td>
-<td><img src="https://edent.github.io/SuperTinyIcons/images/svg/colaboratory.svg" width="100" title="Google Colab"></td>
-<td><img src="https://edent.github.io/SuperTinyIcons/images/svg/docker.svg" width="100" title="Docker"></td>
+<td><a href=#cli-installation><img src="https://edent.github.io/SuperTinyIcons/images/svg/powershell.svg" width="70" title="CLI"></td>
+<td><a href=#google-colab><img src="https://edent.github.io/SuperTinyIcons/images/svg/colaboratory.svg" width="70" title="Google Colab"></td>
+<td><a href=#docker><img src="https://edent.github.io/SuperTinyIcons/images/svg/docker.svg" width="70" title="Docker"></td>
 </tr>
 </table>
 
