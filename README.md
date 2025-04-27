@@ -88,8 +88,6 @@ NPBDetect is available via:
 
 ----
 
-----
-
 ## Google Colab
 
 NPBDetect is also available online through Google Colaboratory.  
@@ -101,22 +99,22 @@ No installation required!
 
 ## Docker
 
-You can also run NPBDetect easily using Docker.
+You can also run NPBDetect easily using Docker. The image can be pulled from  
 
 Example command:
 
 ```bash
 docker run --rm -it \
-    --volume <INPUT/OUTPUT_DIR>:/data \
+    --volume <INPUT_DIR>:/data \
     npbdetect \
     python NPBDetect.py predict \
         -v 1 \
         --gbk /data/BGC0000004.gbk \
         --pred HC \
-        --out_dir /data/test1
+        --out_dir <OUTPUT_DIR>
 ```
 
-Replace `<INPUT/OUTPUT_DIR>` with the path to your input and output folder.
+Replace `<INPUT_DIR>` with the path to your input folder. Make sure to create a folder for outputs inside `<INPUT_DIR>`
 
 ----
 
