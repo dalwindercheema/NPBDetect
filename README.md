@@ -91,6 +91,7 @@ docker run --rm -it \
 npbdetect \
 python NPBDetect.py \
 predict \
+-v 1 \
 --gbk /data/BGC0000004.gbk \
 --pred HC \
 --out_dir /data/test1 \
