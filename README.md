@@ -105,16 +105,17 @@ Example command:
 
 ```bash
 docker run --rm -it \
-    --volume <INPUT_DIR>:/data \
+    --volume <INPUT_DIR>:/data/input \
+    --volume <OUTPUT_DIR>:/data/output \
     npbdetect \
     python NPBDetect.py predict \
         -v 1 \
-        --gbk /data/BGC0000004.gbk \
+        --gbk /data/input/BGC0000004.gbk \
         --pred HC \
-        --out_dir <OUTPUT_DIR>
+        --out_dir /data/output/
 ```
 
-Replace `<INPUT_DIR>` with the path to your input folder. Make sure to create a folder for outputs inside `<INPUT_DIR>`
+Replace `<INPUT_DIR>` and `<OUTPUT_DIR>` with your local paths.
 
 ----
 
