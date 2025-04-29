@@ -107,7 +107,7 @@ Example command:
 docker run --rm -it \
     --volume <INPUT_DIR>:/data/input \
     --volume <OUTPUT_DIR>:/data/output \
-    npbdetect \
+    dalwindercheema/npbdetect \
     python NPBDetect.py predict \
         -v 1 \
         --gbk /data/input/BGC0000004.gbk \
