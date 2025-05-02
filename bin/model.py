@@ -7,20 +7,20 @@ class NeuralNet(nn.Module):
     def __init__(self, feats, num_classes):
         super(NeuralNet, self).__init__()
         self.fc1 = nn.Linear(feats, 100)
-        self.gelu1 = nn.GELU()
         self.layer1 = nn.LayerNorm(100)
+        self.gelu1 = nn.GELU()
         self.fc2 = nn.Linear(feats, 50)
-        self.gelu2 = nn.GELU()
         self.layer2 = nn.LayerNorm(50)
+        self.gelu2 = nn.GELU()
         self.fc3 = nn.Linear(50, num_classes)
  
     def forward(self, x):
         out = self.fc1(x)
-        out = self.gelu1(out)
         out = self.layer1(out)
+        out = self.gelu1(out)
         out = self.fc2(x)
-        out = self.gelu2(out)
         out = self.layer2(out)
+        out = self.gelu2(out)
         out = self.fc3(out)
         return out
 
