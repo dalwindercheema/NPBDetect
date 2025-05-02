@@ -30,7 +30,7 @@ def get_model(base_dir, verbose):
     if(verbose > 0):
         print('Loading model parameters')
     model = NeuralNet(feats, num_classes)
-    model_weights = base_dir + 'model/npb_model'
+    model_weights = base_dir + 'model/new_model.pt'
     if( os.path.isfile(model_weights) == False):
         print(''''Missing model weights. Expecting weights in current directory.
               Stopping!''')

@@ -13,7 +13,7 @@ import argparse, textwrap
 import numpy
 import pandas as pd
 import tempfile
-
+from numpy.random import seed
 from Bio import SeqIO
 import torch
 
@@ -22,9 +22,12 @@ from bin.kmerprofiles import nucmer, protmer
 from bin.PFAM_feats import pfam_domains
 from bin.model import get_model
 
-__VERSION__ = '1.0.0'
+__VERSION__ = '1.1.0'
 
 
+seed_val = 4
+seed(seed_val)
+torch.manual_seed(seed_val)
 
 def make_predictions(gbk, prediction_type, output_dir, verbose):
     if( os.path.isfile(gbk) == False):
