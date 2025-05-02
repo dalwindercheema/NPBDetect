@@ -13,6 +13,7 @@ import argparse, textwrap
 import numpy
 import pandas as pd
 import tempfile
+import pickle
 from numpy.random import seed
 from Bio import SeqIO
 import torch
@@ -81,6 +82,8 @@ def make_predictions(gbk, prediction_type, output_dir, verbose):
     prot_matrix = PROTFEAT.get_profiles()
 
     input_matrix = numpy.concatenate((pfam_matrix, nuc_matrix, prot_matrix), axis = 1)
+    scaler = pickle.load(open(base_dir + "/model/scaler.pkl", 'rb'))
+    input_matrix = scaler.transform(input_matrix)
     logits = model(torch.Tensor(input_matrix).to(dtype=torch.float32))
     sigm = 1/(1 + numpy.exp(-logits.detach().numpy()))
     predictions = pd.DataFrame(sigm).T
